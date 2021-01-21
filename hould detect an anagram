@@ -1,0 +1,29 @@
+
+[1mFrom:[0m /home/idmiod/Development/code/Phase1/anagram-detector/lib/anagram.rb @ line 17 Anagram#match:
+
+    [1;34m10[0m: [32mdef[0m [1;34mmatch[0m(word)
+    [1;34m11[0m:     word_array = []
+    [1;34m12[0m:     word_sorted = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m13[0m:     initializer_sorted = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m14[0m:     [1;34m# iterate over the array of words that .match method takes as args [0m
+    [1;34m15[0m:     [1;34m# compare each word of that array to the initializer_word[0m
+    [1;34m16[0m:     word.each [32mdo[0m |word1|
+ => [1;34m17[0m:         binding.pry
+    [1;34m18[0m:     [1;34m# use #split and #sort to compare arrays and see if they contain the same letters[0m
+    [1;34m19[0m:         word_sorted = word1.split([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).sort.join([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)
+    [1;34m20[0m:         initializer_sorted = @initializer_word.split([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).sort.join([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)
+    [1;34m21[0m:         [32mif[0m word_sorted == initializer_sorted
+    [1;34m22[0m:             word_array << word1
+    [1;34m23[0m:             word.each [32mdo[0m |word2|
+    [1;34m24[0m:                 word_sorted = word2.split([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).sort.join([31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)
+    [1;34m25[0m:                 [32mif[0m word_sorted == initializer_sorted
+    [1;34m26[0m:                 word_array << word2
+    [1;34m27[0m:                 [32mend[0m
+    [1;34m28[0m:             [32mend[0m
+    [1;34m29[0m:             [32mreturn[0m word_array.uniq
+    [1;34m30[0m:         [32melsif[0m word_sorted != initializer_sorted
+    [1;34m31[0m:             [32mreturn[0m []   
+    [1;34m32[0m:         [32mend[0m        
+    [1;34m33[0m:     [32mend[0m
+    [1;34m34[0m: [32mend[0m
+
